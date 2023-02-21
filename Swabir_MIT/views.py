@@ -9,3 +9,9 @@ def reg(request):
     password = ''
 
 
+    reg_form = UserReg(request.POST or None)
+    if reg_form.is_valid():
+        name = reg_form.cleaned_data.get("name")
+        email = reg_form.cleaned_data.get("email")
+        password = reg_form.cleaned_data.get("password")
+
