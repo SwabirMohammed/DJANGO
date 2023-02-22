@@ -12,7 +12,7 @@ class UserLogin(forms.Form):
     user_pass = forms.CharField()
 
 
-class MembersReg(forms.Form):
+class RegMembers(forms.Form):
     name = forms.CharField(max_length=100)
     age = forms.CharField(max_length=100)
     phone = forms.CharField(max_length=100)

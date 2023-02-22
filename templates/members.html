@@ -9,11 +9,20 @@
 <h1> Members Page</h1>
 
 <form action="" method="POST">
+    {% csrf_token %}
+    {{ reg_members_form.as_p }}
     <input type="submit" name="members" value="RegisterMember">
 
 </form>
 
+{% if submit_members == "RegisterMember" %}
+    {{ name }}
+    {{ age }}
+    {{ phone }}
+    {{ city }}
+    {{ country }}
 
+{% endif %}
 
 
 
