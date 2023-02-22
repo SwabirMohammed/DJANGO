@@ -6,12 +6,18 @@
 </head>
 <body>
 <h1> Register with Us!</h1>
-<form action="">
+<form action="" method="POST">
     {% csrf_token %}
     {{ reg_form.as_p }}
     <input type="submit" name="Reg" value="Register">
 
 </form>
+
+{% if submit_button == "Register" %}
+        {{ name }}
+        {{ email }}
+
+{% endif %}
 
 
 
