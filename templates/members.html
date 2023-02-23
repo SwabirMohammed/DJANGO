@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
 </head>
 <body>
 
-<h1> Members Page</h1>
-
-<form action="" method="POST">
+<h1 style="margin-left: 400px; margin-top: 150px; font-size: 25px;"> Members Page</h1>
+<div>
+  <form style="margin-left: 400px; justify-content:center; width: 210px; font-family: FreeSerif; " action="" method="POST">
     {% csrf_token %}
     {{ reg_members_form.as_p }}
-    <input type="submit" name="members" value="RegisterMember">
+    <input style="width: 210px; height: 30px; border: 1px; font-family: Mukti; background-color: black; color: white" type="submit" name="members" value="Register Member">
 
 </form>
+
+
+</div>
+
 
 {% if submit_members == "RegisterMember" %}
     {{ name }}

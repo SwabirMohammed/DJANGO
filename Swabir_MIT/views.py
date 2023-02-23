@@ -19,7 +19,7 @@ def reg(request):
 
 
 def reg_members(request):
-    submit_members = request.POST.get("members")
+    submit_members = request.POST.get("Members")
     name = ''
     age = ''
     phone = ''
@@ -38,6 +38,7 @@ def reg_members(request):
                'age': age,
                'phone': phone,
                'city': city,
-               'country': country
+               'country': country,
+               'submit_members': submit_members
                }
     return render(request, 'members.html', context)
